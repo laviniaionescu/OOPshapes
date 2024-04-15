@@ -1,4 +1,5 @@
 import math
+pi = 3.14
 class Shape:
     def __init__(self):
         pass
@@ -97,3 +98,23 @@ class RightTriangle(Triangle):
 
 ######################################################
 
+class Circle(Shape):
+    def __init__(self, radius):
+        super().__init__()
+
+        self.radius = radius
+
+    def calculate_area(self):
+        area = pi * self.radius ** 2
+        return area
+
+    def calculate_perimeter(self):
+        perimeter = 2 * pi * self.radius
+        return perimeter
+
+
+# circle = Circle(3)
+# area = circle.calculate_area()
+# perimeter = circle.calculate_perimeter()
+# print(f"The area of the circle is {area}")
+# print(f"The perimeter of the circle is {perimeter}")
